@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\OAuthCallbackRequest;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
 
@@ -19,7 +23,7 @@ class AuthController extends Controller
 
     /**
      * Login user
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     * @return Application|RedirectResponse|Redirector
      */
     public function login()
     {
@@ -36,34 +40,17 @@ class AuthController extends Controller
         return redirect(env('OAUTH_SERVER_URL') . '/oauth/authorize?' . $query);
     }
 
-    public function callback(\Illuminate\Http\Request $request)
+    public function callback(OAuthCallbackRequest $request)
     {
-
-        $code = $request->input('code');
-
         $response = Http::post(env('OAUTH_SERVER_URL') . '/oauth/token', [
             'grant_type' => 'authorization_code',
             'client_id' => env('OAUTH_CLIENT_ID'),
             'client_secret' => env('OAUTH_CLIENT_SECRET'),
-            'redirect_uri' => env('OAUTH_REDIRECT_URI'),
-            'code' => $code,
+            'redirect_uri' => env('OAUTH_REDIRECT_URL'),
+            'code' => $request->code,
         ]);
 
-//        if ($response->failed()) {
-//            return redirect('/')->with('errorMsg', $response->serverError());
-//        }
-
-        dd($response);
-
-//        $oauthUser = Http::withHeaders([
-//            'Authorization' => 'Bearer ' . $response->json('access_token'),
-//        ])->post(env('OAUTH_SERVER') . '/api/me');
-
-//        $user = User::findOrCreateUser($oauthUser->json('id'));
-
-//        if (auth()->loginUsingId($user->id)) {
-//            return redirect('/dashboard')->with('successMsg', __('successfully logged in'));
-//        }
+        return $response->json();
     }
 
     public function logout()
