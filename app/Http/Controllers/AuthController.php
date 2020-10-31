@@ -42,15 +42,20 @@ class AuthController extends Controller
 
     public function callback(OAuthCallbackRequest $request)
     {
-        $response = Http::post(env('OAUTH_SERVER_URL') . '/oauth/token', [
+
+        $code = $request->input('code');
+
+        $response = Http::post(env('OAUTH_SERVER_URL') . "/oauth/token", [
             'grant_type' => 'authorization_code',
             'client_id' => env('OAUTH_CLIENT_ID'),
             'client_secret' => env('OAUTH_CLIENT_SECRET'),
             'redirect_uri' => env('OAUTH_REDIRECT_URL'),
-            'code' => $request->code,
+            'code' => $code,
         ]);
 
         return $response->json();
+
+
     }
 
     public function logout()
