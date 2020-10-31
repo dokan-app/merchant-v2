@@ -41,29 +41,17 @@ class AuthController extends Controller
 
         $code = $request->input('code');
 
-        $response = Http::post(env('OAUTH_SERVER_URL') . '/oauth/token', [
+        $response = Http::post('http://dokan-account.test/oauth/token', [
             'grant_type' => 'authorization_code',
             'client_id' => env('OAUTH_CLIENT_ID'),
             'client_secret' => env('OAUTH_CLIENT_SECRET'),
-            'redirect_uri' => env('OAUTH_REDIRECT_URI'),
+            'redirect_uri' => env('OAUTH_REDIRECT_URL'),
             'code' => $code,
         ]);
 
-//        if ($response->failed()) {
-//            return redirect('/')->with('errorMsg', $response->serverError());
-//        }
+        return $response->json();
 
-        dd($response);
 
-//        $oauthUser = Http::withHeaders([
-//            'Authorization' => 'Bearer ' . $response->json('access_token'),
-//        ])->post(env('OAUTH_SERVER') . '/api/me');
-
-//        $user = User::findOrCreateUser($oauthUser->json('id'));
-
-//        if (auth()->loginUsingId($user->id)) {
-//            return redirect('/dashboard')->with('successMsg', __('successfully logged in'));
-//        }
     }
 
     public function logout()

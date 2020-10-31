@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="54538ad4-9ae2-4eb9-a4f2-de5c7a4e0b09" name="Default Changelist" comment="" />
+    <list default="true" id="54538ad4-9ae2-4eb9-a4f2-de5c7a4e0b09" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +16,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -128,6 +137,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -137,6 +147,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="C:\laragon\www\dokan-merchant" />
       <recent name="C:\laragon\www\dokan-merchant\app\Http" />
       <recent name="C:\laragon\www\dokan-merchant\resources" />
@@ -158,6 +169,8 @@
       <updated>1604106424898</updated>
       <workItem from="1604106425918" duration="6494000" />
       <workItem from="1604122484562" duration="2786000" />
+      <workItem from="1604125967772" duration="830000" />
+      <workItem from="1604127264696" duration="704000" />
     </task>
     <servers />
   </component>
@@ -165,6 +178,14 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="-1360" y="217" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604126092279">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-1360" y="217" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.983/1920.23.1920.1057/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1604126092279" />
+    <state width="221" height="457" key="HiddenNamespacesPopup" timestamp="1604126115058">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state width="221" height="457" key="HiddenNamespacesPopup/0.23.1920.983/1920.23.1920.1057/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1604126115058" />
     <state x="461" y="170" key="SettingsEditor" timestamp="1604108998446">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -173,13 +194,18 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1050@0.0.1920.1050" timestamp="1604124724275" />
+    <state x="-1056" y="416" width="600" height="350" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1604126273430">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-1056" y="416" width="600" height="350" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.23.1920.983/1920.23.1920.1057/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1604126273430" />
     <state x="616" y="243" key="run.anything.popup" timestamp="1604109170609">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="616" y="243" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1604109170609" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1604124261167">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="-1297" y="252" width="672" height="683" key="search.everywhere.popup" timestamp="1604127277261">
+      <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1604124261167" />
+    <state x="-1297" y="252" width="672" height="683" key="search.everywhere.popup/0.23.1920.983/1920.23.1920.1057/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1604127277261" />
   </component>
 </project>
