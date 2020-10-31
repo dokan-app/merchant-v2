@@ -1,0 +1,14 @@
+$primary: #34495e;
+$menu-item-active-background-color: $primary;
+
+@import "~bulma";
+
+body {
+    @apply bg-gray-200;
+    min-height: 100vh;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
