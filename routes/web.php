@@ -8,7 +8,7 @@ Route::get('/', function () {
 })->name('home');
 
 
-Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
+Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'token.refresh']], function () {
     Route::get('/', function () {
         return view('dashboard');
     })->name('dashboard');

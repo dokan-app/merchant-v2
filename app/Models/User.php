@@ -58,9 +58,10 @@ class User extends Authenticatable
 
     public function getMeAttribute()
     {
-        return Http::withHeaders([
+        $response = Http::withHeaders([
             'Authorization' => 'Bearer ' . auth()->user()->token->access_token,
         ])->post(env('OAUTH_SERVER_URL') . '/api/auth/me');
 
+        return $response;
     }
 }

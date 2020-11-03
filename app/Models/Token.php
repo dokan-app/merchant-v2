@@ -18,4 +18,9 @@ class Token extends Model
         'refresh_token',
         'expires_in'
     ];
+
+    public function hasExpired()
+    {
+        return now()->gte($this->updated_at->addSeconds($this->expires_in));
+    }
 }
