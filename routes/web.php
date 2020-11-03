@@ -1,12 +1,14 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', function () {
+    return view('welcome');
+})->name('home');
 
-Route::view('/', 'welcome');
 
-
-Route::group(['prefix' => 'dashboard'], function () {
+Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::get('/', function () {
         return view('dashboard');
     })->name('dashboard');
